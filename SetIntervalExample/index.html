@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Intro</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script type="application/javascript" src="scripts/index.js"></script>
+</head>
+<body onload="">
+    <canvas id="canvas" width="700" height="700"></canvas>
+
+    <script>
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(700, 700);
+        ctx.stroke();
+    </script>
+</body>

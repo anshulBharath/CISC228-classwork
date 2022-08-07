@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css">
+
+</head>
+<body>
+    
+    <h1 style="text-align: center">Interactive Experiment</h1>
+    
+    <div class="grid-x">
+        <div id="canvasContainer" class="cell large-8 sketchStyles">
+            <script src="sketch.js"></script>
+        </div>
+
+        <div class="cell large-4 controlsStyles">
+            <fieldset>
+                <legend style="text-decoration: underline;"><strong>Canvas Controls</strong></legend>
+                <div class="slider-controls">
+                    
+                    <div class="slider-styles">
+                        <label for="spin">Spin Speed</label>
+                        <input type="range" min="-2" max="2" id="spin" step=".25" value="0"/>
+                    </div>
+                    
+                    <div class="slider-styles">
+                        <label for="size">Object size</label>
+                        <input type="range" min="0.03125" max="4" id="size" step=".25" value="1"/>
+                    </div>    
+                </div>
+                
+                <div class="slider-styles">
+                    <input class="button-7" type="button" id="color1" value="New Colors" onclick="getNewColors()"/>
+                    <input class="button-7" type="button" id="color2" value="New Blue Value" onclick="getNewBlueColors()"/>
+                </div>
+
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend style="text-decoration: underline;"><strong>Keyboard Controls</strong></legend>
+                <ul>
+                    <li><strong>Space</strong>: Pause music and movement</li>
+                    <li><strong>Enter</strong>: Toggle mic input</li>
+                    <li><strong>A</strong>: Add a square element</li>
+                    <li><strong>S</strong>: Remove last square element</li>
+                    <li><strong>D</strong>: Remove all elements</li>
+                    <li><strong>F</strong>: Toggle fullscreen mode</li>
+                    <li><strong>B</strong>: Clear background w/o removing elements</li>
+                    <li><strong>Bkspce</strong>: Remove all elements and clear background</li>
+                    <li><strong>P</strong>: Take a screenshot of the current Canvas</li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend style="text-decoration: underline;"><strong>Select Music</strong></legend>
+                <ul>
+                    <li><strong>1</strong>: Infinite Dream - Droid Bishop</li>
+                    <li><strong>2</strong>: Showcase Me - Ahjay Stelino</li>
+                    <li><strong>3</strong>: 80s Synth Wave - VXZ</li>
+                    <li><strong>4</strong>: Dark Synthwave - dimadjdocent</li>
+                    <li><strong>5</strong>: Cyber Vintage - dimadjdocent</li>
+                </ul>
+            </fieldset>
+        </div>
+    </div>       
+
+</body>
+</html>

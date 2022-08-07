@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>-->
+    <script src="./p5/p5.min.js"></script>
+    <script src="./p5/p5.sound.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css">
+
+</head>
+<body class="body-class">
+
+    <script>
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="control-styles">
+            <fieldset>
+                <legend style="text-decoration: underline;"><strong>Current State</strong></legend>
+                <ul>
+                    <li>Total Elements: <span id="numElements"></span></li>
+                    <li>Selected Element: <span id="selectedElement"></span></li>
+                    <li><b>Left/Right Arrows</b>: select elements</li>
+                </ul>
+            </fieldset>
+            <br> 
+            
+            <fieldset>
+                <legend style="text-decoration: underline;"><strong>Canvas Controls</strong></legend>
+                <div class="slider-controls">
+                    
+                    <div class="slider-styles">
+                        <label for="spin">Spin Speed</label>
+                        <input type="range" min="-2" max="2" id="spin" step=".25" value="0"/>
+                    </div>
+                    
+                    <div class="slider-styles">
+                        <label for="size">Object size</label>
+                        <input type="range" min="0.03125" max="4" id="size" step=".25" value="1"/>
+                    </div>    
+                </div>
+                
+                <div class="slider-styles">
+                    <input class="button-7" type="button" id="color1" value="New Colors" onclick="getNewColors()"/>
+                    <input class="button-7" type="button" id="color2" value="New Blue Value" onclick="getNewBlueColors()"/>
+                </div>
+        
+            </fieldset>
+            <br>
+        
+            <fieldset>
+                <legend style="text-decoration: underline;"><strong>Keyboard Controls</strong></legend>
+                <ul>
+                    <li><strong>Enter</strong>: Toggle mic input</li>
+                    <li><strong>A</strong>: Add a square element</li>
+                    <li><strong>S</strong>: Remove last square element</li>
+                    <li><strong>D</strong>: Remove all elements</li>
+                    <li><strong>B</strong>: Clear background w/o removing elements</li>
+                    <li><strong>Bkspce</strong>: Remove all elements and clear background</li>
+                </ul>
+            </fieldset>
+        
+            <fieldset>
+                <legend style="text-decoration: underline;"><strong>Select Music</strong></legend>
+                <ul>
+                    <li><strong>1</strong>: Infinite Dream - Droid Bishop</li>
+                    <li><strong>2</strong>: Showcase Me - Ahjay Stelino</li>
+                    <li><strong>3</strong>: 80s Synth Wave - VXZ</li>
+                    <li><strong>4</strong>: Dark Synthwave - dimadjdocent</li>
+                    <li><strong>5</strong>: Cyber Vintage - dimadjdocent</li>
+                </ul>
+            </fieldset> 
+        </div>
+      </div>
+      
+      <!-- Use any element to open the sidenav -->
+      
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+      <div id="main">
+        <div class="intro" id="introDiv">
+            <span class="title">Calculated Chaos</span> <br>
+            <span class="desc">A generative art studio created using HTML, JavaScript, and p5.js.</span> <br> <br> <br> <br>
+            <span class="intro-control">Space - start/stop&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;Alt/Option - toggle controls &nbsp;&nbsp;<b>|</b>&nbsp;&nbsp; Ctrl - toggle title&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp; P - save .jpg</span> <br>
+        </div>
+
+        <div id="canvasContainer" class="sketchStyles">
+            <script src="sketch.js"></script>
+        </div>
+      </div>
+    
+</body>
+</html>

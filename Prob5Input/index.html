@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <meta charset="utf-8" />
+
+    <style>
+        html, body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex
+        }
+        .input {
+            flex: 1;
+        }
+        .mainCanvas {
+            flex: 1;
+        }
+        canvas {
+            display: block;
+        }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+        <form class="input">
+        <input type="number" id="rate" placeholder="enter speed here" />
+        <input type="checkbox" id="optin" value="xyz" /> Check for black Background
+        <input type="button" id="move" value="Center Circle" onclick="returnToCenter()"/>
+        <input type="range" min="1" max="300" value="100" id="diameter" />
+        <select id="colors">
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="red">red</option>
+            <option value="yellow">yellow</option>
+            <option value="orange">orange</option>
+            <option value="random">random</option>
+        </select>
+        </form>
+        <div class="mainCanvas">
+            <script src="sketch.js"></script>
+        </div>
+    </div>
+    
+  </body>
+</html>

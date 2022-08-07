@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="application/javascript" src="main.js"></script>
+</head>
+<body>
+    <input type="number" placeholder="Enter value" id="leftOperand">
+    <select name="operator" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+        <option value="%">%</option>
+        <option value="^">^</option>
+        <option value="Rand">?</option>
+    </select>
+    <input type="number" placeholder="Enter value" id="rightOperand"> = <span id="result"></span> <br> <br>
+    <button type="button" onclick="calculate()">Calculate</button>
+</body>
